@@ -1,0 +1,31 @@
+@urlBase=http://localhost:3000
+
+GET {{urlBase}}/filmes/FIL110
+
+# POST {{urlBase}}/filmes
+# Content-Type: application/json
+
+  {
+        "titulo": "Novo Filme",
+        "ano": 2002,
+        "genero": [
+            { "id": "GEN001", "nome": "Crime" }
+        ],
+        "diretor": {
+            "id": "DIR101",
+            "nome": "Fernando Meirelles",
+            "nascimento": "1955-11-09",
+            "nacionalidade": "Brasileiro"
+        },
+        "elenco": [
+            {
+                "id": "ATR101",
+                "nome": "novo ator",
+                "papel": "novo papel",
+                "nascimento": "1983-05-21",
+                "nacionalidade": "Brasileiro"
+            }    
+        ],
+        "sinopse":
+            "Buscapé é um jovem pobre, negro e muito sensível, que cresce em um universo de muita violência. Ele vive na Cidade de Deus, favela carioca conhecida pela violência e pela criminalidade."
+    }
