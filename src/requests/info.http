@@ -1,0 +1,7 @@
+@urlBase=http://localhost:3000
+
+GET {{urlBase}}/info/genero
+
+# GET {{urlBase}}/info/atores
+
+# GET {{urlBase}}/info/diretores

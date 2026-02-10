@@ -1,6 +1,8 @@
 @urlBase=http://localhost:3000
 
-GET {{urlBase}}/filmes/FIL110
+
+GET {{urlBase}}/filmes
+
 
 # POST {{urlBase}}/filmes
 # Content-Type: application/json

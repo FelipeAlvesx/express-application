@@ -4,7 +4,7 @@ export interface Filme {
     id: string;
     titulo: string;
     ano: number;
-    genero: Genero;
+    genero: Genero[];
     diretor: Diretor;
     elenco: Ator[];
     sinopse: string;
