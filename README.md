@@ -9,6 +9,7 @@ Esta é uma API RESTful desenvolvida em Node.js com Express e TypeScript para ge
 - [TypeScript](https://www.typescriptlang.org/)
 - [Dotenv](https://www.npmjs.com/package/dotenv) (para variáveis de ambiente)
 - [JSON Web Token](https://www.npmjs.com/package/jsonwebtoken) (para autenticação via JWT)
+- [Bcrypt](https://www.npmjs.com/package/bcrypt) (para criptografia de senhas)
 
 ## 🛠️ Como rodar o projeto a partir do GitHub
 
@@ -50,11 +51,11 @@ Para baixar e rodar este projeto em sua máquina local, siga os passos abaixo:
 ### Autenticação (`/`)
 
 - **`POST /register`**
-    - Registra um novo usuário.
+    - Registra um novo usuário. A senha é criptografada com **bcrypt** antes de ser armazenada.
     - **Body (JSON):** `email` e `password`.
 
 - **`POST /login`**
-    - Realiza login e retorna um token JWT.
+    - Realiza login validando a senha com **bcrypt** e retorna um token JWT.
     - **Body (JSON):** `email` e `password`.
     - **Resposta:** `{ "token": "..." }`
 
@@ -103,5 +104,5 @@ A API utiliza **JSON Web Token (JWT)** para proteger rotas. O fluxo é:
 2. Faça login via `POST /login` para obter o token.
 3. Envie o token nas rotas protegidas (🔒) no header:
    `     Authorization: Bearer <seu_token>
-    `
+ `
    O token expira em **1 hora**.
