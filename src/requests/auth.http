@@ -1,0 +1,29 @@
+@urlBase=http://localhost:3000
+@token={{login.response.body.token}}
+
+### login
+# @name login
+POST {{urlBase}}/login
+Content-Type: application/json
+
+{
+    "email": "feelipe@email.com",
+    "password": "secret"
+}
+
+ 
+### info atores
+# @name infoAtores 
+GET {{urlBase}}/info/atores
+Authorization: Bearer {{token}} 
+
+
+### register
+# @name register
+POST {{urlBase}}/register
+Content-Type: application/json
+
+{
+    "email": "feelipe@email.com",
+    "password": "secret"
+}

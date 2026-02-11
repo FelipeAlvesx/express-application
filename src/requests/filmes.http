@@ -14,7 +14,7 @@ GET {{urlBase}}/filmes
             { "id": "GEN001", "nome": "Crime" }
         ],
         "diretor": {
-            "id": "DIR101",
+            "id": "DIR101", 
             "nome": "Fernando Meirelles",
             "nascimento": "1955-11-09",
             "nacionalidade": "Brasileiro"

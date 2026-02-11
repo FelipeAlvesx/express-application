@@ -5,8 +5,8 @@ import { Router } from "express";
 
 export const routerInfo = Router();
 
-routerInfo.get("/info/atores", getAtores);
+routerInfo.get("/atores", getAtores);
 
-routerInfo.get("/info/diretores", getDiretores);
+routerInfo.get("/diretores", getDiretores);
 
-routerInfo.get("/info/genero", getGeneros);
+routerInfo.get("/genero", getGeneros);
